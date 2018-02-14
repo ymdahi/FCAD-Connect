@@ -1,0 +1,8 @@
+{
+  "name": "fcadconnect",
+  "app_id": "cb68d0d9",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
