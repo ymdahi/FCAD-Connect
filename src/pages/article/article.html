@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg">
+
+  <div *ngIf="article" class="article-loaded">
+    <img src="{{ article.image }}" class="header-image">
+	<ion-card>
+		<ion-card-header>
+			{{ article.title }}
+		</ion-card-header>
+		<ion-card-content>
+			<div innerHtml="{{ article.body }}"></div>
+		</ion-card-content>
+	</ion-card>
+  </div>
+
+  <div *ngIf="!article" class="article-loading">
+    Loading
+  </div>
+
+</ion-content>
