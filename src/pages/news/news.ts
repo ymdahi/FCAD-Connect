@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { FeedProvider } from '../../providers/feed/feed';
+import { ArticlePage } from '../article/article';
+
 
 @Component({
   selector: 'page-news',
@@ -7,8 +10,29 @@ import { NavController } from 'ionic-angular';
 })
 export class NewsPage {
 
-  constructor(public navCtrl: NavController) {
+  feed: any;
 
+  constructor(public navCtrl: NavController, private feedProvider: FeedProvider) {
+  }
+
+  ionViewWillEnter(){
+  	this.feedProvider.getFeed('articles').subscribe(feed => {
+  		this.feed = feed;
+  	});
+  }
+
+  openArticle(itemNid, itemTitle){
+    this.navCtrl.push(ArticlePage, {
+      itemNid: itemNid,
+      itemTitle: itemTitle
+    });
+  }
+
+  doRefresh(refresher){
+    this.feedProvider.getFeed('articles').subscribe(feed => {
+      this.feed = feed;
+      refresher.complete();
+    });
   }
 
 }

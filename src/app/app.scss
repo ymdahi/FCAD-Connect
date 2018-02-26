@@ -14,3 +14,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.toolbar-title {
+	text-align: center;
+}
+
+.img-fit-cover {
+	object-fit: cover;
+}
+
+.header-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.cards-bg {
+	background-color: map-get($colors, light);
+}

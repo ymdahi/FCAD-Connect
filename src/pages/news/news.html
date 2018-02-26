@@ -1,9 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>News</ion-title>
+    <ion-title>
+      News
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list *ngIf="feed">
+    <ion-item *ngFor="let item of feed" (click)="openArticle(item.nid, item.title)">
+      <ion-thumbnail item-start>
+        <img src="{{ item.image }}" class="img-fit-cover">
+      </ion-thumbnail>
+      <h2>{{ item.title }}</h2>
+      <p><i>{{ item.date_ago }} &bull; {{ item.author_name }}</i></p>
+      <p>{{ item.teaser }}</p>
+    </ion-item>
+  </ion-list>
 
 </ion-content>
