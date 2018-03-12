@@ -37,8 +37,8 @@ export class MyApp {
 
   presentAlert() {
     let alert = this.alertCtrl.create({
-      title: 'Test Alert',
-      subTitle: 'Received notification',
+      title: 'FCM Alert',
+      subTitle: 'Received notification. Data will be here depending on how we structure it.',
       buttons: ['Ok']
     });
     alert.present();
