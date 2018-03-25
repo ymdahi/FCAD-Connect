@@ -5,18 +5,15 @@
 </ion-header>
 
 
-<ion-content class="cards-bg">
+<ion-content>
 
   <div *ngIf="article" class="article-loaded">
     <img src="{{ article.image }}" class="header-image">
-	<ion-card>
-		<ion-card-header>
-			{{ article.title }}
-		</ion-card-header>
-		<ion-card-content>
-			<div innerHtml="{{ article.body }}"></div>
-		</ion-card-content>
-	</ion-card>
+    <div padding>
+  	  <h1>{{ article.title }}</h1>
+      <span>{{ article.date }}</span>
+  	  <div innerHtml="{{ article.body }}"></div>
+    </div>
   </div>
 
   <div *ngIf="!article" class="content-loading">

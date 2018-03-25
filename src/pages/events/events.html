@@ -13,13 +13,13 @@
   </ion-refresher>
   
   <ion-list *ngIf="feed">
-    <ion-item *ngFor="let item of feed" (click)="openArticle(item.nid, item.title)">
+    <ion-item *ngFor="let item of feed" (click)="openEvent(item.nid, item.title)" text-wrap>
       <ion-thumbnail item-start>
         <img src="{{ item.image }}" class="img-fit-cover">
       </ion-thumbnail>
       <h2>{{ item.title }}</h2>
       <p><i>{{ item.date_ago }} &bull; {{ item.author_name }}</i></p>
-      <p>{{ item.teaser }}</p>
+      <p><!-- {{ item.teaser }} --></p>
     </ion-item>
   </ion-list>
 

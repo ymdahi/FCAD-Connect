@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FeedProvider } from '../../providers/feed/feed';
-import { ArticlePage } from '../article/article';
+import { EventPage } from '../event/event';
 
 
 @Component({
@@ -21,8 +21,8 @@ export class EventsPage {
   	});
   }
 
-  openArticle(itemNid, itemTitle){
-    this.navCtrl.push(ArticlePage, {
+  openEvent(itemNid, itemTitle){
+    this.navCtrl.push(EventPage, {
       itemNid: itemNid,
       itemTitle: itemTitle
     });

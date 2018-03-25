@@ -7,6 +7,7 @@ import { NewsPage } from '../pages/news/news';
 import { EventsPage } from '../pages/events/events';
 import { SettingsPage } from '../pages/settings/settings';
 import { ArticlePage } from '../pages/article/article';
+import { EventPage } from '../pages/event/event';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     EventsPage,
     SettingsPage,
     ArticlePage,
+    EventPage,
     TabsPage
   ],
   imports: [
@@ -39,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     EventsPage,
     SettingsPage,
     ArticlePage,
+    EventPage,
     TabsPage
   ],
   providers: [
