@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+
+
+
+
+
+<ion-content>
+
+  <div *ngIf="article" class="article-loaded">
+    <img src="{{ article.image }}" class="header-image">
+  	<div padding>
+  		<h1>{{ article.title }}</h1>
+      <span class="item-info">{{ article.date }} &bull; {{ article.author_name }}</span>
+  		<div innerHtml="{{ article.body }}"></div>
+    </div>
+  </div>
+
+  <div *ngIf="!article" class="content-loading">
+    <ion-spinner></ion-spinner>
+  </div>
+
+</ion-content>
