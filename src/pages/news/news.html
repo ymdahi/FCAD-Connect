@@ -11,15 +11,26 @@
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
-  
+
   <ion-list *ngIf="feed">
     <ion-item *ngFor="let item of feed" (click)="openArticle(item.nid, item.title)" text-wrap>
-      <ion-thumbnail item-start>
+      <!--<ion-thumbnail item-end>
         <img src="{{ item.image }}" class="img-fit-cover">
-      </ion-thumbnail>
+      </ion-thumbnail>-->
+      <img src="{{ item.image }}" class="img-fit-cover" style="max-height: 80px; max-width: 80px; float: right; margin: 5px 12px 15px 15px;">
       <span class="item-info">{{ item.date_ago }} &bull; {{ item.author_name }}</span>
       <h2>{{ item.title }}</h2>
-      <p><!-- {{ item.teaser }} --></p>
+      <p>{{ item.teaser }}</p>
+        <div text-right margin-top style="clear:both"> 
+          <button ion-button icon-left clear small>
+            <ion-icon name="bookmark"></ion-icon>
+            <div>Bookmark</div>
+          </button>
+          <button ion-button icon-left clear small>
+            <ion-icon name="share"></ion-icon>
+            <div>Share</div>
+          </button>
+        </div>
     </ion-item>
   </ion-list>
 

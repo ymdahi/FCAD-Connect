@@ -15,8 +15,18 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Replica Std', sans-serif;
+}
+
+.content {
+	background-color: map-get($colors, light);
+}
+
 .toolbar-title {
 	text-align: center;
+	font-family: 'Replca Std', sans-serif;
+	font-weight: bold;
 }
 
 .img-fit-cover {
@@ -25,15 +35,286 @@
 
 .header-image {
 	width: 100%;
-	height: 200px;
+	max-height: 200px;
 	object-fit: cover;
 }
 
-.cards-bg {
-	background-color: map-get($colors, light);
+.item-info {
+	font-size: 1.2rem;
+	color: #777;
 }
 
 .content-loading {
 	text-align: center;
 	margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+/*** CUSTOM FONTS ***/
+
+/* Replica Std */
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd-HeavyItalic.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd-LightItalic.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd-BoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd-Heavy.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd-Italic.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd-Bold.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Replica Std';
+    src: url('../assets/fonts/ReplicaStd-Light.woff2') format('woff2'),
+        url('../assets/fonts/ReplicaStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* Avenir */
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Medium.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Light.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-BookOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-BookOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-BlackOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-BlackOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-HeavyOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-HeavyOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Oblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-HeavyOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-HeavyOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-LightOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Oblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-BlackOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-BlackOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Light.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Roman.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Heavy.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Heavy.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-MediumOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-MediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Medium.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-Black.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-MediumOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-MediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-BookOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-BookOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('../assets/fonts/AvenirLTStd-LightOblique.woff2') format('woff2'),
+        url('../assets/fonts/AvenirLTStd-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
 }

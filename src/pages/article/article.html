@@ -1,9 +1,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title>{{ title }}</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only>
+            <ion-icon name="bookmark"></ion-icon>
+        </button>
+        <button ion-button icon-only>
+            <ion-icon name="share"></ion-icon>
+        </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
 
 <ion-content>
 
@@ -11,8 +18,8 @@
     <img src="{{ article.image }}" class="header-image">
     <div padding>
   	  <h1>{{ article.title }}</h1>
-      <span>{{ article.date }}</span>
-  	  <div innerHtml="{{ article.body }}"></div>
+      <span class="item-info">{{ article.date }} &bull; {{ article.author_name }}</span>
+  	  <div innerHtml="{{ article.body }}" class="article-content"></div>
     </div>
   </div>
 
