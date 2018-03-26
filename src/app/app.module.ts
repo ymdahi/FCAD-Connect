@@ -18,6 +18,8 @@ import { FeedProvider } from '../providers/feed/feed';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     SplashScreen,
     FCM,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    FeedProvider
+    FeedProvider,
+    SocialSharing
   ]
 })
 export class AppModule {}

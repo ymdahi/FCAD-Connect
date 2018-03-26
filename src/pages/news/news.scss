@@ -1,3 +1,16 @@
 page-news {
 
+	.item h2 {
+		font-size: 1.8rem;
+	}
+
+	.item img {
+		float: right;
+		max-height: 80px;
+		max-width: 80px;
+		margin: 5px 12px 15px 15px;
+	}
+	.item .bar-buttons {
+		clear: both;
+	}
 }
