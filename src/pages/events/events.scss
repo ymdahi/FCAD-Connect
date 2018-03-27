@@ -4,4 +4,8 @@ page-events {
 		font-size: 1.8rem;
 	}
 
+	.toolbar-background {
+		background-color: map-get($colors, secondary);
+	}
+
 }
