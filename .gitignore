@@ -34,7 +34,10 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 
+
+
+# Manual ignores
+
 google-services.json
 GoogleService-Info.plist
 src/assets/fonts/*.woff*
-www/assets/fonts/*.woff*
