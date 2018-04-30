@@ -17,7 +17,7 @@ export class NewsPage {
   }
 
   ionViewWillEnter(){
-  	this.feedProvider.getFeed('articles').subscribe(feed => {
+  	this.feedProvider.getFeed('articles/all').subscribe(feed => {
   		this.feed = feed;
   	});
   }
@@ -30,7 +30,7 @@ export class NewsPage {
   }
 
   doRefresh(refresher){
-    this.feedProvider.getFeed('articles').subscribe(feed => {
+    this.feedProvider.getFeed('articles/all').subscribe(feed => {
       this.feed = feed;
       refresher.complete();
     });

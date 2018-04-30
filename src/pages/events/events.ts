@@ -16,7 +16,7 @@ export class EventsPage {
   }
 
   ionViewWillEnter(){
-  	this.feedProvider.getFeed('events').subscribe(feed => {
+  	this.feedProvider.getFeed('events/all').subscribe(feed => {
   		this.feed = feed;
   	});
   }
@@ -29,7 +29,7 @@ export class EventsPage {
   }
 
   doRefresh(refresher){
-    this.feedProvider.getFeed('events').subscribe(feed => {
+    this.feedProvider.getFeed('events/all').subscribe(feed => {
       this.feed = feed;
       refresher.complete();
     });
